@@ -4,6 +4,7 @@ import (
 	"flag"
 
 	"github.com/kyokomi/emoji/v2"
+	"fmt"
 )
 
 func main() {

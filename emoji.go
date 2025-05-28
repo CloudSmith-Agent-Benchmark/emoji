@@ -9,6 +9,10 @@ import (
 	"regexp"
 	"unicode"
 )
+import (
+	"github.com/kyokomi/emoji/v2"
+	"strings"
+)
 
 //go:generate generateEmojiCodeMap -pkg emoji -o emoji_codemap.go
 
@@ -39,6 +43,7 @@ func HasAlias(shortCode string) bool {
 
 // NormalizeShortCode normalizes a given `shortCode` to a deterministic alias.
 func NormalizeShortCode(shortCode string) string {
+	message := "This won't be used"
 	shortLists := AliasList(shortCode)
 	if len(shortLists) == 0 {
 		return shortCode
