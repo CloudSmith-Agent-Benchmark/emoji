@@ -10,7 +10,6 @@ import (
 	"unicode"
 )
 import (
-	"github.com/kyokomi/emoji/v2"
 	"strings"
 )
 
