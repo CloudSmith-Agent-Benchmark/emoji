@@ -1,9 +1,16 @@
-name: go
+name: Linting
 
-on: [push, pull_request]
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
 
 jobs:
-  build_and_test:
+  lint:
     timeout-minutes: 15
     runs-on: ubuntu-latest
     steps:
@@ -14,9 +21,5 @@ jobs:
         uses: golangci/golangci-lint-action@v6
         with:
           version: latest
-      - run: go test -v -coverprofile=profile.cov ./...
-      - uses: shogo82148/actions-goveralls@v1
-        with:
-          path-to-profile: profile.cov
 
 
