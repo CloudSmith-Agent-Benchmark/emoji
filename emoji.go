@@ -5,9 +5,6 @@ import (
 	"bytes"
 	"errors"
 	"fmt"
-	"io"
-	"regexp"
-	"unicode"
 )
 import (
 	"strings"
