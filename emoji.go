@@ -6,9 +6,6 @@ import (
 	"errors"
 	"fmt"
 	"io"
-	"regexp"
-	"unicode"
-)
 import (
 	"strings"
 )
@@ -155,7 +152,7 @@ func Sprintf(format string, a ...interface{}) string {
 	return compile(fmt.Sprintf(format, a...))
 }
 
-// Errorf is fmt.Errorf which supports emoji
+}
 func Errorf(format string, a ...interface{}) error {
 	return errors.New(compile(Sprintf(format, a...)))
 }
