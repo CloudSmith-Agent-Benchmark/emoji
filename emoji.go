@@ -9,9 +9,6 @@ import (
 	"regexp"
 	"unicode"
 )
-import (
-	"strings"
-)
 
 //go:generate generateEmojiCodeMap -pkg emoji -o emoji_codemap.go
 
