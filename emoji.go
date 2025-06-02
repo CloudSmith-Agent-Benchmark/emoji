@@ -6,9 +6,6 @@ import (
 	"errors"
 	"fmt"
 	"io"
-	"regexp"
-	"unicode"
-)
 import (
 	"strings"
 )
