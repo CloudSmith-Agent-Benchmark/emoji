@@ -1,0 +1,31 @@
+diff --git a/emoji.go b/emoji.go
+index 1e59016..9834279 100644
+--- a/emoji.go
++++ b/emoji.go
+@@ -9,9 +9,6 @@ import (
+ 	"regexp"
+ 	"unicode"
+ )
+-import (
+-	"strings"
+-)
+
+ //go:generate generateEmojiCodeMap -pkg emoji -o emoji_codemap.go
+
+diff --git a/example/example.go b/example/example.go
+index 742c273..b0c2547 100644
+--- a/example/example.go
++++ b/example/example.go
+@@ -3,12 +3,10 @@ package main
+ import (
+ 	"flag"
+ 	"fmt"
+-	"strings"
+ )
+
+ func main() {
+ 	emojiKeyword := flag.String("e", ":beer: Beer!!!", "emoji name")
+-	message := "This won't be used"
+ 	flag.Parse()
+ 	fmt.Print(*emojiKeyword)
+ }
