@@ -4794,7 +4794,7 @@ func emojiCode() map[string]string {
 var emojiRevCodeMap map[string][]string
 var emojiRevCodeMapInitOnce = sync.Once{}
 
-func emojiRevCode() map[string][]string {
+func emojiRevCode_test() map[string][]string {
 	emojiRevCodeMapInitOnce.Do(func() {
 		emojiRevCodeMap = map[string][]string{
 			"#\ufe0f\u20e3":                          {":hash:", ":keycap_#:"},
